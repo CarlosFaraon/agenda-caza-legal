@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - HuntLog</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0b110d;
+      color: #e8ece0;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    h1 { color: #8faa5a; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .subtitulo { color: #a8b098; margin-bottom: 2rem; font-size: 0.95rem; }
+    h2 {
+      color: #8faa5a; font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;
+      padding-bottom: 0.3rem; border-bottom: 1px solid rgba(143,170,90,0.2);
+    }
+    p, li { color: #a8b098; margin-bottom: 0.8rem; }
+    ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; }
+    strong { color: #e8ece0; }
+    a { color: #8faa5a; }
+    .fecha {
+      color: #6a7560; font-size: 0.85rem; margin-top: 3rem;
+      padding-top: 1rem; border-top: 1px solid rgba(143,170,90,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="subtitulo">HuntLog — Your digital hunting journal</p>
+
+    <h2>1. Data controller</h2>
+    <p>HuntLog is an application developed by Juan Carlos Martínez Martínez. For any privacy-related question, you can contact us at <strong>agendadecaza@gmail.com</strong>.</p>
+
+    <h2>2. Data we collect</h2>
+    <p>The app collects and stores the following data that the user voluntarily provides:</p>
+    <ul>
+      <li><strong>Account data:</strong> email address and password for sign-up and login.</li>
+      <li><strong>Profile data:</strong> name, city, and state/region.</li>
+      <li><strong>Hunts:</strong> date, location, hunt type, species, method, weapon used, ammunition, notes, rating, weather data, and photos.</li>
+      <li><strong>Gear:</strong> information about firearms (name, type, caliber, photo) and dogs (name, breed, photo).</li>
+      <li><strong>Documents:</strong> type, name, number, issue and expiration dates, region, and a photo of the document.</li>
+      <li><strong>Tags/quotas:</strong> species, limits, and season dates.</li>
+      <li><strong>GPS location (foreground):</strong> coordinates used to record tracks during hunts and to retrieve weather data. Accessed only with your explicit permission.</li>
+      <li><strong>GPS location during route tracking:</strong> when you tap "Start GPS track" on a hunt, the app records the coordinates of your route. On Android, tracking continues with the screen locked via a foreground service with a visible notification ("Recording GPS track"). On iOS, the app only accesses location while in use ("While Using the App" permission). In both cases, tracking stops as soon as you end the hunt, and tracking is never performed automatically without an explicit action by you.</li>
+      <li><strong>Push notification tokens:</strong> an anonymous device identifier used to receive SOS alerts from your hunting party. It contains no personal data.</li>
+      <li><strong>Photos:</strong> images taken or selected by the user, stored on secure servers.</li>
+      <li><strong>Chat messages:</strong> messages sent in the community chat together with your username.</li>
+    </ul>
+
+    <h2>3. Purpose of processing</h2>
+    <p>The data is used exclusively to:</p>
+    <ul>
+      <li>Provide the app's features (hunt logging, gear management, documents, statistics, etc.).</li>
+      <li>Sync your data across devices.</li>
+      <li>Enable communication between users through the chat.</li>
+      <li>Generate personal statistics of your hunts.</li>
+      <li>Alert you about expiring documents.</li>
+    </ul>
+
+    <h2>4. Storage and security</h2>
+    <p>Data is stored on <strong>Supabase</strong>, a cloud database platform that complies with applicable data protection regulations. Security measures include:</p>
+    <ul>
+      <li>Secure authentication with email and password.</li>
+      <li>Row-Level Security (RLS) policies that ensure each user can only access their own data.</li>
+      <li>Encrypted connections via HTTPS/TLS.</li>
+      <li>Photos are stored in a secure storage service with controlled access.</li>
+    </ul>
+
+    <h2>5. Data sharing</h2>
+    <p><strong>We do not sell, rent, or share your personal data with third parties.</strong></p>
+    <p>The only cases in which your data may be visible to others are:</p>
+    <ul>
+      <li><strong>Community chat:</strong> the messages you send are visible to all authenticated users of the app.</li>
+      <li><strong>Shared hunts:</strong> when you choose to share a hunt via a link, a public copy is created that is accessible only with that link (a URL with a unique, non-guessable identifier).</li>
+    </ul>
+
+    <h2>6. Third-party services</h2>
+    <p>The app uses the following external services:</p>
+    <ul>
+      <li><strong>Supabase:</strong> authentication, database, and file storage. Policy: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.</li>
+      <li><strong>Open-Meteo:</strong> weather data. Only GPS coordinates are sent, with no personal data.</li>
+      <li><strong>OpenStreetMap / Nominatim:</strong> location geocoding and map display.</li>
+      <li><strong>ipapi.co:</strong> IP-based geolocation service used as a fallback when GPS is unavailable, to show the weather for your area. Only your public IP address is queried; it is not stored or shared. Policy: <a href="https://ipapi.co/privacy/" target="_blank" rel="noopener">ipapi.co/privacy</a>.</li>
+      <li><strong>Google Fonts:</strong> typefaces for the interface.</li>
+      <li><strong>Push notifications (Apple Push Notification service on iOS and Firebase Cloud Messaging on Android):</strong> delivery of push notifications for SOS alerts and party messages. Only an anonymous device token is sent.</li>
+    </ul>
+
+    <h2>7. Data retention and deletion</h2>
+    <p>Your data is retained for as long as you keep your account active. You can delete your account and all associated data at any time from the profile section of the app. Deletion is permanent and irreversible. You may also contact us by email to exercise this right.</p>
+
+    <h2>8. Your rights</h2>
+    <p>Depending on where you live, you may have the right to:</p>
+    <ul>
+      <li><strong>Access:</strong> request what data of yours we store.</li>
+      <li><strong>Correction:</strong> correct your data from the profile section of the app.</li>
+      <li><strong>Deletion:</strong> request deletion of your account and data.</li>
+      <li><strong>Portability:</strong> request a copy of your data in a readable format.</li>
+      <li><strong>Objection:</strong> object to the processing of your data.</li>
+    </ul>
+    <p>California residents have additional rights under the CCPA, including the right to know, delete, and opt out of the sale of personal information. We do not sell personal information.</p>
+
+    <h2>9. Age restriction</h2>
+    <p><strong>This app is intended exclusively for users 18 years of age or older.</strong> Hunting requires a valid hunting license, which is generally limited to adults. By signing up, you confirm that you are 18 or older. We do not knowingly collect data from anyone under 18. If we learn that a user is a minor, we will delete their account and associated data.</p>
+
+    <h2>10. Changes to this policy</h2>
+    <p>We reserve the right to modify this privacy policy. Any changes will be posted on this page along with the update date.</p>
+
+    <h2>11. Contact</h2>
+    <p>For any privacy question or to exercise your rights, you can write to us at:</p>
+    <p><strong>agendadecaza@gmail.com</strong></p>
+
+    <p class="fecha">Last updated: June 10, 2026</p>
+  </div>
+</body>
+</html>
