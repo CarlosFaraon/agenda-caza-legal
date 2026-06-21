@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung - Jagdtagebuch</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0b110d;
+      color: #e8ece0;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    h1 { color: #8faa5a; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .subtitulo { color: #a8b098; margin-bottom: 2rem; font-size: 0.95rem; }
+    h2 {
+      color: #8faa5a; font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;
+      padding-bottom: 0.3rem; border-bottom: 1px solid rgba(143,170,90,0.2);
+    }
+    p, li { color: #a8b098; margin-bottom: 0.8rem; }
+    ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; }
+    strong { color: #e8ece0; }
+    a { color: #8faa5a; }
+    .fecha {
+      color: #6a7560; font-size: 0.85rem; margin-top: 3rem;
+      padding-top: 1rem; border-top: 1px solid rgba(143,170,90,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Datenschutzerklärung</h1>
+    <p class="subtitulo">Jagdtagebuch — Ihr digitales Jagdtagebuch</p>
+
+    <h2>1. Verantwortlicher</h2>
+    <p>Jagdtagebuch ist eine von Juan Carlos Martínez Martínez entwickelte Anwendung. Verantwortlicher im Sinne der DSGVO ist Juan Carlos Martínez Martínez. Bei Fragen zum Datenschutz können Sie uns unter <strong>agendadecaza@gmail.com</strong> kontaktieren.</p>
+
+    <h2>2. Erhobene Daten</h2>
+    <p>Die App erhebt und speichert die folgenden Daten, die der Nutzer freiwillig bereitstellt:</p>
+    <ul>
+      <li><strong>Kontodaten:</strong> E-Mail-Adresse und Passwort für Registrierung und Anmeldung.</li>
+      <li><strong>Profildaten:</strong> Name, Stadt und Bundesland/Region.</li>
+      <li><strong>Jagden:</strong> Datum, Ort, Jagdart, Wildart, Methode, verwendete Waffe, Munition, Notizen, Bewertung, Wetterdaten und Fotos.</li>
+      <li><strong>Ausrüstung:</strong> Informationen über Schusswaffen (Name, Typ, Kaliber, Foto) und Hunde (Name, Rasse, Foto).</li>
+      <li><strong>Dokumente:</strong> Typ, Name, Nummer, Ausstellungs- und Ablaufdatum, Region sowie ein Foto des Dokuments.</li>
+      <li><strong>Marken/Kontingente:</strong> Wildart, Begrenzungen und Saisondaten.</li>
+      <li><strong>GPS-Standort (Vordergrund):</strong> Koordinaten, die zur Aufzeichnung von Routen während der Jagd und zum Abruf von Wetterdaten verwendet werden. Der Zugriff erfolgt nur mit Ihrer ausdrücklichen Einwilligung.</li>
+      <li><strong>GPS-Standort während der Routenaufzeichnung:</strong> Wenn Sie bei einer Jagd auf „GPS-Aufzeichnung starten" tippen, zeichnet die App die Koordinaten Ihrer Route auf. Unter Android wird die Aufzeichnung bei gesperrtem Bildschirm über einen Vordergrunddienst mit einer sichtbaren Benachrichtigung („GPS-Aufzeichnung läuft") fortgesetzt. Unter iOS greift die App nur während der Nutzung auf den Standort zu (Berechtigung „Beim Verwenden der App"). In beiden Fällen endet die Aufzeichnung, sobald Sie die Jagd beenden, und sie erfolgt niemals automatisch ohne eine ausdrückliche Handlung Ihrerseits.</li>
+      <li><strong>Push-Benachrichtigungstoken:</strong> eine anonyme Gerätekennung, die zum Empfang von SOS-Alarmen Ihrer Jagdgruppe verwendet wird. Sie enthält keine personenbezogenen Daten.</li>
+      <li><strong>Fotos:</strong> vom Nutzer aufgenommene oder ausgewählte Bilder, die auf sicheren Servern gespeichert werden.</li>
+      <li><strong>Chat-Nachrichten:</strong> im Community-Chat gesendete Nachrichten zusammen mit Ihrem Benutzernamen.</li>
+    </ul>
+
+    <h2>3. Zweck der Verarbeitung</h2>
+    <p>Die Daten werden ausschließlich zu folgenden Zwecken verwendet:</p>
+    <ul>
+      <li>Bereitstellung der Funktionen der App (Jagdprotokollierung, Ausrüstungsverwaltung, Dokumente, Statistiken usw.).</li>
+      <li>Synchronisierung Ihrer Daten über mehrere Geräte hinweg.</li>
+      <li>Ermöglichung der Kommunikation zwischen Nutzern über den Chat.</li>
+      <li>Erstellung persönlicher Statistiken Ihrer Jagden.</li>
+      <li>Benachrichtigung über ablaufende Dokumente.</li>
+    </ul>
+
+    <h2>4. Speicherung und Sicherheit</h2>
+    <p>Die Daten werden bei <strong>Supabase</strong> gespeichert, einer Cloud-Datenbankplattform, die die geltenden Datenschutzbestimmungen einhält. Zu den Sicherheitsmaßnahmen gehören:</p>
+    <ul>
+      <li>Sichere Authentifizierung mit E-Mail und Passwort.</li>
+      <li>Row-Level-Security-Richtlinien (RLS), die sicherstellen, dass jeder Nutzer nur auf seine eigenen Daten zugreifen kann.</li>
+      <li>Verschlüsselte Verbindungen über HTTPS/TLS.</li>
+      <li>Fotos werden in einem sicheren Speicherdienst mit kontrolliertem Zugriff gespeichert.</li>
+    </ul>
+
+    <h2>5. Weitergabe von Daten</h2>
+    <p><strong>Wir verkaufen, vermieten oder teilen Ihre personenbezogenen Daten nicht mit Dritten.</strong></p>
+    <p>Die einzigen Fälle, in denen Ihre Daten für andere sichtbar sein können, sind:</p>
+    <ul>
+      <li><strong>Community-Chat:</strong> Die von Ihnen gesendeten Nachrichten sind für alle authentifizierten Nutzer der App sichtbar.</li>
+      <li><strong>Geteilte Jagden:</strong> Wenn Sie sich dafür entscheiden, eine Jagd über einen Link zu teilen, wird eine öffentliche Kopie erstellt, die nur mit diesem Link zugänglich ist (eine URL mit einer eindeutigen, nicht erratbaren Kennung).</li>
+    </ul>
+
+    <h2>6. Dienste von Drittanbietern</h2>
+    <p>Die App nutzt die folgenden externen Dienste:</p>
+    <ul>
+      <li><strong>Supabase:</strong> Authentifizierung, Datenbank und Dateispeicherung. Richtlinie: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.</li>
+      <li><strong>Open-Meteo:</strong> Wetterdaten. Es werden ausschließlich GPS-Koordinaten ohne personenbezogene Daten übermittelt.</li>
+      <li><strong>OpenStreetMap / Nominatim:</strong> Geokodierung von Standorten und Kartendarstellung.</li>
+      <li><strong>ipapi.co:</strong> IP-basierter Geolokalisierungsdienst, der als Ausweichlösung verwendet wird, wenn GPS nicht verfügbar ist, um das Wetter für Ihre Region anzuzeigen. Es wird nur Ihre öffentliche IP-Adresse abgefragt; diese wird nicht gespeichert oder weitergegeben. Richtlinie: <a href="https://ipapi.co/privacy/" target="_blank" rel="noopener">ipapi.co/privacy</a>.</li>
+      <li><strong>Google Fonts:</strong> Schriftarten für die Benutzeroberfläche.</li>
+      <li><strong>Push-Benachrichtigungen (Apple Push Notification service unter iOS und Firebase Cloud Messaging unter Android):</strong> Zustellung von Push-Benachrichtigungen für SOS-Alarme und Gruppennachrichten. Es wird ausschließlich ein anonymes Gerätetoken übermittelt.</li>
+    </ul>
+
+    <h2>7. Aufbewahrung und Löschung von Daten</h2>
+    <p>Ihre Daten werden so lange aufbewahrt, wie Sie Ihr Konto aktiv halten. Sie können Ihr Konto und alle zugehörigen Daten jederzeit im Profilbereich der App löschen. Die Löschung ist dauerhaft und unwiderruflich. Sie können dieses Recht auch per E-Mail ausüben.</p>
+
+    <h2>8. Ihre Rechte</h2>
+    <p>Sie haben die folgenden Rechte:</p>
+    <ul>
+      <li><strong>Auskunft:</strong> die Anfrage, welche Ihrer Daten wir speichern.</li>
+      <li><strong>Berichtigung:</strong> die Korrektur Ihrer Daten im Profilbereich der App.</li>
+      <li><strong>Löschung:</strong> die Anfrage zur Löschung Ihres Kontos und Ihrer Daten.</li>
+      <li><strong>Datenübertragbarkeit:</strong> die Anfrage einer Kopie Ihrer Daten in einem lesbaren Format.</li>
+      <li><strong>Widerspruch:</strong> der Widerspruch gegen die Verarbeitung Ihrer Daten.</li>
+    </ul>
+    <p>Gemäß der Datenschutz-Grundverordnung (DSGVO) haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Datenübertragbarkeit und Widerspruch hinsichtlich Ihrer personenbezogenen Daten. Darüber hinaus haben Sie das Recht, eine Beschwerde bei der zuständigen Datenschutz-Aufsichtsbehörde einzureichen.</p>
+
+    <h2>9. Altersbeschränkung</h2>
+    <p><strong>Diese App ist ausschließlich für Nutzer ab 18 Jahren bestimmt.</strong> Die Jagd erfordert einen gültigen Jagdschein, der in der Regel auf Erwachsene beschränkt ist. Mit Ihrer Registrierung bestätigen Sie, dass Sie 18 Jahre oder älter sind. Wir erheben wissentlich keine Daten von Personen unter 18 Jahren. Sollten wir feststellen, dass ein Nutzer minderjährig ist, löschen wir dessen Konto und die zugehörigen Daten.</p>
+
+    <h2>10. Änderungen dieser Erklärung</h2>
+    <p>Wir behalten uns das Recht vor, diese Datenschutzerklärung zu ändern. Etwaige Änderungen werden zusammen mit dem Datum der Aktualisierung auf dieser Seite veröffentlicht.</p>
+
+    <h2>11. Kontakt</h2>
+    <p>Bei Fragen zum Datenschutz oder zur Ausübung Ihrer Rechte können Sie uns schreiben an:</p>
+    <p><strong>agendadecaza@gmail.com</strong></p>
+
+    <p class="fecha">Zuletzt aktualisiert: 10. Juni 2026</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité - Carnet de Chasse</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0b110d;
+      color: #e8ece0;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    h1 { color: #8faa5a; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .subtitulo { color: #a8b098; margin-bottom: 2rem; font-size: 0.95rem; }
+    h2 {
+      color: #8faa5a; font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;
+      padding-bottom: 0.3rem; border-bottom: 1px solid rgba(143,170,90,0.2);
+    }
+    p, li { color: #a8b098; margin-bottom: 0.8rem; }
+    ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; }
+    strong { color: #e8ece0; }
+    a { color: #8faa5a; }
+    .fecha {
+      color: #6a7560; font-size: 0.85rem; margin-top: 3rem;
+      padding-top: 1rem; border-top: 1px solid rgba(143,170,90,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Politique de confidentialité</h1>
+    <p class="subtitulo">Carnet de Chasse — Votre carnet de chasse numérique</p>
+
+    <h2>1. Responsable du traitement</h2>
+    <p>Carnet de Chasse est une application développée par Juan Carlos Martínez Martínez. Pour toute question relative à la confidentialité, vous pouvez nous contacter à l'adresse <strong>agendadecaza@gmail.com</strong>.</p>
+
+    <h2>2. Données que nous collectons</h2>
+    <p>L'application collecte et conserve les données suivantes, que l'utilisateur fournit volontairement :</p>
+    <ul>
+      <li><strong>Données de compte :</strong> adresse e-mail et mot de passe pour l'inscription et la connexion.</li>
+      <li><strong>Données de profil :</strong> nom, ville et département ou région.</li>
+      <li><strong>Chasses :</strong> date, lieu, type de chasse, espèces, méthode, arme utilisée, munitions, notes, évaluation, données météorologiques et photos.</li>
+      <li><strong>Équipement :</strong> informations sur les armes à feu (nom, type, calibre, photo) et les chiens (nom, race, photo).</li>
+      <li><strong>Documents :</strong> type, nom, numéro, dates de délivrance et d'expiration, région et une photo du document.</li>
+      <li><strong>Bracelets/quotas :</strong> espèces, limites et dates de saison.</li>
+      <li><strong>Localisation GPS (premier plan) :</strong> coordonnées utilisées pour enregistrer les traces pendant les chasses et pour récupérer les données météorologiques. Accessibles uniquement avec votre autorisation explicite.</li>
+      <li><strong>Localisation GPS pendant le suivi d'itinéraire :</strong> lorsque vous appuyez sur « Démarrer le suivi GPS » sur une chasse, l'application enregistre les coordonnées de votre itinéraire. Sur Android, le suivi se poursuit écran verrouillé via un service de premier plan avec une notification visible (« Enregistrement de la trace GPS »). Sur iOS, l'application accède à la localisation uniquement pendant l'utilisation (autorisation « Lors de l'utilisation de l'app »). Dans les deux cas, le suivi s'arrête dès que vous terminez la chasse, et le suivi n'est jamais effectué automatiquement sans une action explicite de votre part.</li>
+      <li><strong>Jetons de notifications push :</strong> un identifiant anonyme de l'appareil utilisé pour recevoir les alertes SOS de votre équipe de chasse. Il ne contient aucune donnée personnelle.</li>
+      <li><strong>Photos :</strong> images prises ou sélectionnées par l'utilisateur, stockées sur des serveurs sécurisés.</li>
+      <li><strong>Messages du chat :</strong> messages envoyés dans le chat communautaire, accompagnés de votre nom d'utilisateur.</li>
+    </ul>
+
+    <h2>3. Finalité du traitement</h2>
+    <p>Les données sont utilisées exclusivement pour :</p>
+    <ul>
+      <li>Fournir les fonctionnalités de l'application (journal de chasse, gestion de l'équipement, documents, statistiques, etc.).</li>
+      <li>Synchroniser vos données entre vos appareils.</li>
+      <li>Permettre la communication entre utilisateurs via le chat.</li>
+      <li>Générer des statistiques personnelles de vos chasses.</li>
+      <li>Vous alerter de l'expiration de vos documents.</li>
+    </ul>
+
+    <h2>4. Conservation et sécurité</h2>
+    <p>Les données sont stockées sur <strong>Supabase</strong>, une plateforme de base de données cloud conforme à la réglementation applicable en matière de protection des données. Les mesures de sécurité comprennent :</p>
+    <ul>
+      <li>Une authentification sécurisée par e-mail et mot de passe.</li>
+      <li>Des politiques de sécurité au niveau des lignes (Row-Level Security, RLS) garantissant que chaque utilisateur ne peut accéder qu'à ses propres données.</li>
+      <li>Des connexions chiffrées via HTTPS/TLS.</li>
+      <li>Les photos sont stockées dans un service de stockage sécurisé à accès contrôlé.</li>
+    </ul>
+
+    <h2>5. Partage des données</h2>
+    <p><strong>Nous ne vendons, ne louons et ne partageons pas vos données personnelles avec des tiers.</strong></p>
+    <p>Les seuls cas dans lesquels vos données peuvent être visibles par d'autres sont :</p>
+    <ul>
+      <li><strong>Chat communautaire :</strong> les messages que vous envoyez sont visibles par tous les utilisateurs authentifiés de l'application.</li>
+      <li><strong>Chasses partagées :</strong> lorsque vous choisissez de partager une chasse via un lien, une copie publique est créée, accessible uniquement avec ce lien (une URL comportant un identifiant unique et non devinable).</li>
+    </ul>
+
+    <h2>6. Services tiers</h2>
+    <p>L'application utilise les services externes suivants :</p>
+    <ul>
+      <li><strong>Supabase :</strong> authentification, base de données et stockage de fichiers. Politique : <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.</li>
+      <li><strong>Open-Meteo :</strong> données météorologiques. Seules les coordonnées GPS sont transmises, sans aucune donnée personnelle.</li>
+      <li><strong>OpenStreetMap / Nominatim :</strong> géocodage de la localisation et affichage des cartes.</li>
+      <li><strong>ipapi.co :</strong> service de géolocalisation par adresse IP utilisé en solution de secours lorsque le GPS n'est pas disponible, afin d'afficher la météo de votre zone. Seule votre adresse IP publique est interrogée ; elle n'est ni stockée ni partagée. Politique : <a href="https://ipapi.co/privacy/" target="_blank" rel="noopener">ipapi.co/privacy</a>.</li>
+      <li><strong>Google Fonts :</strong> polices de caractères de l'interface.</li>
+      <li><strong>Notifications push (Apple Push Notification service sur iOS et Firebase Cloud Messaging sur Android) :</strong> envoi des notifications push pour les alertes SOS et les messages de l'équipe. Seul un jeton anonyme de l'appareil est transmis.</li>
+    </ul>
+
+    <h2>7. Conservation et suppression des données</h2>
+    <p>Vos données sont conservées tant que vous maintenez votre compte actif. Vous pouvez supprimer votre compte et toutes les données associées à tout moment depuis la section profil de l'application. La suppression est définitive et irréversible. Vous pouvez également nous contacter par e-mail pour exercer ce droit.</p>
+
+    <h2>8. Vos droits</h2>
+    <p>Vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong>Accès :</strong> demander quelles données vous concernant nous conservons.</li>
+      <li><strong>Rectification :</strong> corriger vos données depuis la section profil de l'application.</li>
+      <li><strong>Effacement :</strong> demander la suppression de votre compte et de vos données.</li>
+      <li><strong>Portabilité :</strong> demander une copie de vos données dans un format lisible.</li>
+      <li><strong>Opposition :</strong> vous opposer au traitement de vos données.</li>
+    </ul>
+    <p>Conformément au Règlement général sur la protection des données (RGPD), vous disposez d'un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition concernant vos données personnelles. Vous avez également le droit d'introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés, <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).</p>
+
+    <h2>9. Restriction d'âge</h2>
+    <p><strong>Cette application est destinée exclusivement aux utilisateurs âgés de 18 ans ou plus.</strong> La chasse exige un permis de chasse valide, généralement réservé aux adultes. En vous inscrivant, vous confirmez être âgé de 18 ans ou plus. Nous ne collectons pas sciemment de données de personnes de moins de 18 ans. Si nous apprenons qu'un utilisateur est mineur, nous supprimerons son compte et les données associées.</p>
+
+    <h2>10. Modifications de la présente politique</h2>
+    <p>Nous nous réservons le droit de modifier la présente politique de confidentialité. Toute modification sera publiée sur cette page accompagnée de la date de mise à jour.</p>
+
+    <h2>11. Contact</h2>
+    <p>Pour toute question relative à la confidentialité ou pour exercer vos droits, vous pouvez nous écrire à :</p>
+    <p><strong>agendadecaza@gmail.com</strong></p>
+
+    <p class="fecha">Dernière mise à jour : 10 juin 2026</p>
+  </div>
+</body>
+</html>
