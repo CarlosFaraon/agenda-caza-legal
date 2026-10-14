@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hunting Log · Agenda de Caza — Únete a la cuadrilla</title>
+<meta name="description" content="Te han invitado a una cuadrilla de Agenda de Caza.">
+<meta name="robots" content="noindex">
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body {
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:linear-gradient(160deg,#0b110d 0%,#15241a 100%);
+    color:#fff; min-height:100vh; display:flex; align-items:center;
+    justify-content:center; text-align:center; padding:24px;
+  }
+  .card { max-width:440px; width:100%; }
+  .logo {
+    width:96px; height:96px; border-radius:22px; margin:0 auto 22px;
+    background:#fff; display:flex; align-items:center; justify-content:center;
+    font-size:46px; box-shadow:0 8px 30px rgba(0,0,0,.4);
+  }
+  h1 { font-size:1.6rem; margin-bottom:8px; }
+  p.sub { color:#b9d4c2; margin-bottom:22px; font-size:1.02rem; line-height:1.45; }
+  .codigo {
+    font-family:monospace; font-size:2.2rem; font-weight:700; letter-spacing:.35rem;
+    background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15);
+    border-radius:14px; padding:16px 8px; margin-bottom:10px;
+  }
+  button.copiar {
+    background:transparent; color:#b9d4c2; border:1px solid rgba(255,255,255,.2);
+    border-radius:12px; padding:12px 18px; min-height:48px; font-size:.95rem;
+    cursor:pointer; margin-bottom:24px;
+  }
+  a.btn {
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    width:100%; min-height:52px; padding:16px; margin-bottom:14px; border-radius:14px;
+    text-decoration:none; font-weight:600; font-size:1.05rem;
+    transition:transform .15s ease;
+  }
+  a.btn:active { transform:scale(.97); }
+  .abrir { background:#3f7d4e; color:#fff; }
+  .ios { background:#000; color:#fff; border:1px solid #333; }
+  .android { background:#fff; color:#111; }
+  p.paso { color:#8fb89c; font-size:.92rem; margin:20px 0 12px; line-height:1.45; }
+  .foot { color:#6f8a78; font-size:.8rem; margin-top:30px; }
+  .oculto { display:none; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">🎯</div>
+    <h1 id="title">Te han invitado a una cuadrilla</h1>
+    <p class="sub" id="subtitle">Únete en Agenda de Caza con este código.</p>
+
+    <div id="bloque-codigo" class="oculto">
+      <div class="codigo" id="codigo"></div>
+      <button type="button" class="copiar" id="btn-copiar">Copiar código</button>
+      <a class="btn abrir" id="btn-abrir" href="#">Abrir en la app</a>
+    </div>
+
+    <p class="paso" id="paso">¿No tienes la app? Descárgala y entra en Chat → Unirse con código.</p>
+    <a class="btn ios" id="btn-ios" href="https://apps.apple.com/app/id6777485650"> App Store</a>
+    <a class="btn android" id="btn-android" href="https://play.google.com/store/apps/details?id=com.agendadecaza.app">▶ Google Play</a>
+
+    <p class="foot">Hunting Log · Agenda de Caza</p>
+  </div>
+
+<script>
+(function () {
+  // --- Idioma ---
+  var lang = (navigator.language || "es").slice(0,2).toLowerCase();
+  var T = {
+    es: { title:"Te han invitado a una cuadrilla", sub:"Únete en Agenda de Caza con este código.", sinCodigo:"El enlace no trae un código válido. Pide a quien te invitó que te lo envíe de nuevo.", copiar:"Copiar código", copiado:"¡Copiado!", abrir:"Abrir en la app", paso:"¿No tienes la app? Descárgala y entra en Chat → Unirse con código." },
+    en: { title:"You've been invited to a hunting group", sub:"Join on Agenda de Caza with this code.", sinCodigo:"This link has no valid code. Ask whoever invited you to send it again.", copiar:"Copy code", copiado:"Copied!", abrir:"Open in the app", paso:"Don't have the app? Download it and go to Chat → Join with code." },
+    fr: { title:"Vous êtes invité dans une équipe", sub:"Rejoignez-la sur Agenda de Caza avec ce code.", sinCodigo:"Ce lien ne contient pas de code valide. Demandez à la personne qui vous a invité de le renvoyer.", copiar:"Copier le code", copiado:"Copié !", abrir:"Ouvrir dans l'app", paso:"Pas encore l'app ? Téléchargez-la puis allez dans Chat → Rejoindre avec un code." },
+    de: { title:"Du wurdest in eine Jagdgruppe eingeladen", sub:"Tritt in Agenda de Caza mit diesem Code bei.", sinCodigo:"Dieser Link enthält keinen gültigen Code. Bitte die Person, die dich eingeladen hat, ihn erneut zu senden.", copiar:"Code kopieren", copiado:"Kopiert!", abrir:"In der App öffnen", paso:"Noch keine App? Lade sie herunter und gehe zu Chat → Mit Code beitreten." }
+  };
+  var t = T[lang] || T.es;
+  document.documentElement.lang = T[lang] ? lang : "es";
+  document.getElementById("title").textContent = t.title;
+  document.getElementById("paso").textContent = t.paso;
+
+  // --- Código: solo A-Z y 0-9, exactamente 6 caracteres ---
+  var crudo = new URLSearchParams(window.location.search).get("codigo") || "";
+  var codigo = crudo.trim().toUpperCase();
+  if (!/^[A-Z0-9]{6}$/.test(codigo)) codigo = null;
+
+  if (!codigo) {
+    document.getElementById("subtitle").textContent = t.sinCodigo;
+    return;
+  }
+
+  document.getElementById("subtitle").textContent = t.sub;
+  document.getElementById("bloque-codigo").className = "";
+  document.getElementById("codigo").textContent = codigo;
+
+  var abrir = document.getElementById("btn-abrir");
+  abrir.textContent = t.abrir;
+  abrir.href = "agendadecaza://unirse?codigo=" + codigo;
+
+  var copiar = document.getElementById("btn-copiar");
+  copiar.textContent = t.copiar;
+  copiar.addEventListener("click", function () {
+    var hecho = function () {
+      copiar.textContent = t.copiado;
+      setTimeout(function () { copiar.textContent = t.copiar; }, 2000);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(codigo).then(hecho, function () {});
+    } else {
+      var ta = document.createElement("textarea");
+      ta.value = codigo; document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); hecho(); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+</body>
+</html>
